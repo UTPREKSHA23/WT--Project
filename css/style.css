@@ -1,3 +1,16 @@
-body {
-  background: white;
+body{
+font-family: Arial;
+text-align:center;
+background-color:#f5f5f5;
+}
+
+a{
+display:block;
+padding:10px;
+background:#007BFF;
+color:white;
+width:200px;
+margin:10px auto;
+text-decoration:none;
+border-radius:5px;
 }
