@@ -28,6 +28,21 @@ function divide() {
     document.getElementById("result").innerText = "Result: " + (a / b);
 }
 
+function sinValue() {
+    let a = Number(document.getElementById("num1").value);
+    document.getElementById("result").innerText = "Result: " + Math.sin(a);
+}
+
+function cosValue() {
+    let a = Number(document.getElementById("num1").value);
+    document.getElementById("result").innerText = "Result: " + Math.cos(a);
+}
+
+function tanValue() {
+    let a = Number(document.getElementById("num1").value);
+    document.getElementById("result").innerText = "Result: " + Math.tan(a);
+}
+
 function power() {
     let a = Number(document.getElementById("num1").value);
     let b = Number(document.getElementById("num2").value);
