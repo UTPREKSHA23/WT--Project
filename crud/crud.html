@@ -1,1 +1,35 @@
-<h1>CRUD Page</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Operations</title>
+    <link rel="stylesheet" href="crud.css">
+</head>
+<body>
+
+<h1>CRUD Operations</h1>
+
+<input type="text" id="id" placeholder="Enter ID">
+<input type="text" id="name" placeholder="Enter Name">
+<input type="text" id="age" placeholder="Enter Age">
+
+<br><br>
+
+<button onclick="addData()">Create</button>
+<button onclick="updateData()">Update</button>
+<button onclick="deleteData()">Delete</button>
+<button onclick="clearFields()">Clear</button>
+
+<h3>Data Table</h3>
+
+<table border="1" id="dataTable">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+</table>
+
+<script src="crud.js"></script>
+
+</body>
+</html>
