@@ -1,9 +1,13 @@
-<servlet>
-    <servlet-name>AddStudentServlet</servlet-name>
-    <servlet-class>AddStudentServlet</servlet-class>
-</servlet>
+<web-app>
 
-<servlet-mapping>
-    <servlet-name>AddStudentServlet</servlet-name>
-    <url-pattern>/AddStudentServlet</url-pattern>
-</servlet-mapping>
+    <servlet>
+        <servlet-name>AddStudentServlet</servlet-name>
+        <servlet-class>AddStudentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddStudentServlet</servlet-name>
+        <url-pattern>/AddStudentServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
