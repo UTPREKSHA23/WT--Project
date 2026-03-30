@@ -1,9 +1,9 @@
 <servlet>
-    <servlet-name>AddStudent</servlet-name>
+    <servlet-name>AddStudentServlet</servlet-name>
     <servlet-class>AddStudentServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>
-    <servlet-name>AddStudent</servlet-name>
-    <url-pattern>/addStudent</url-pattern>
+    <servlet-name>AddStudentServlet</servlet-name>
+    <url-pattern>/git AddStudentServlet</url-pattern>
 </servlet-mapping>
