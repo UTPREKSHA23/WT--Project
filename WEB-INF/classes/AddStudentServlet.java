@@ -29,7 +29,7 @@ public class AddStudentServlet extends HttpServlet {
                 int id = Integer.parseInt(idStr);
                 int age = Integer.parseInt(ageStr);
 
-                stmt.executeUpdate("insert into students values (" + id + ", '" + name + "', " + age + ")");
+                stmt.executeUpdate("insert into student values (" + id + ", '" + name + "', " + age + ")");
                 out.println("Inserted Successfully!");
             }
 
