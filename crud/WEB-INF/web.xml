@@ -5,5 +5,5 @@
 
 <servlet-mapping>
     <servlet-name>AddStudentServlet</servlet-name>
-    <url-pattern>/git AddStudentServlet</url-pattern>
+    <url-pattern>/AddStudentServlet</url-pattern>
 </servlet-mapping>
