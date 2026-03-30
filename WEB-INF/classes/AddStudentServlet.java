@@ -35,7 +35,7 @@ public class AddStudentServlet extends HttpServlet {
 
             // READ
             else if(action.equals("read")) {
-                ResultSet rs = stmt.executeQuery("select * from students");
+                ResultSet rs = stmt.executeQuery("select * from student");
 
                 while(rs.next()) {
                     out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getInt(3) + "<br>");
@@ -47,7 +47,7 @@ public class AddStudentServlet extends HttpServlet {
                 int id = Integer.parseInt(idStr);
                 int age = Integer.parseInt(ageStr);
 
-                stmt.executeUpdate("update students set name='" + name + "', age=" + age + " where id=" + id);
+                stmt.executeUpdate("update student set name='" + name + "', age=" + age + " where id=" + id);
                 out.println("Updated Successfully!");
             }
 
@@ -55,7 +55,7 @@ public class AddStudentServlet extends HttpServlet {
             else if(action.equals("delete")) {
                 int id = Integer.parseInt(idStr);
 
-                stmt.executeUpdate("delete from students where id=" + id);
+                stmt.executeUpdate("delete from student where id=" + id);
                 out.println("Deleted Successfully!");
             }
 
@@ -63,7 +63,7 @@ public class AddStudentServlet extends HttpServlet {
             else if(action.equals("search")) {
                 int id = Integer.parseInt(idStr);
 
-                ResultSet rs = stmt.executeQuery("select * from students where id=" + id);
+                ResultSet rs = stmt.executeQuery("select * from student where id=" + id);
 
                 if(rs.next()) {
                     out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getInt(3));
