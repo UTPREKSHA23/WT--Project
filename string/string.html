@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>String Operations</title>
     <link rel="stylesheet" href="string.css">
 </head>
 <body>
+    <h2>String Operations</h2>
 
-<h1>String Operations</h1>
+    <div class="input-group">
+        <input type="text" id="input1" placeholder="Enter first string...">
+        <input type="text" id="input2" placeholder="Enter second string...">
+    </div>
 
-<input type="text" id="input1" placeholder="Enter string">
-<input type="text" id="input2" placeholder="Second string">
+    <div id="result"></div>
 
-<br><br>
+    <div class="semicircle-container">
+        <button onclick="findLength()">Length</button>
+        <button onclick="reverseString()">Reverse</button>
+        <button onclick="checkPalindrome()">Palindrome</button>
+        <button onclick="concatenateStrings()">Concatenate</button>
+        <button onclick="findInitials()">Initials</button>
+        <button onclick="clearFields()">Clear</button>
+    </div>
 
-<button onclick="findLength()">Length</button>
-<button onclick="reverseString()">Reverse</button>
-<button onclick="checkPalindrome()">Palindrome</button>
-<button onclick="concatenateStrings()">Concatenate</button>
-<button onclick="findInitials()">Initials</button>
-<button onclick="clearFields()">Clear</button>
-
-<p id="result"></p>
-
-<script src="string.js"></script>
-
+    <script src="string.js"></script>
 </body>
 </html>
