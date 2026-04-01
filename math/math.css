@@ -1,31 +1,91 @@
 body {
-    font-family: Arial;
+    font-family: 'Poppins', sans-serif; /* A rounded, friendly font */
     text-align: center;
-    background: #f4f4f4;
-    margin-top: 50px;
+    margin: 0;
+    padding-top: 80px;
+    /* Mesmerizing Pastel Gradient */
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffd1ff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    min-height: 100vh;
+    color: #5d5d5d;
 }
 
+/* Background Animation for that 'Mesmerizing' feel */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h2 {
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* Styled Input Boxes */
 input {
-    padding: 10px;
+    padding: 15px;
     margin: 10px;
     width: 200px;
+    border: none;
+    border-radius: 20px; /* Bubbly rounded corners */
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+    font-size: 16px;
+    color: #ff69b4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+input:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+/* Advanced 'Girly' Buttons */
 button {
-    padding: 10px 15px;
-    margin: 5px;
+    padding: 12px 25px;
+    margin: 8px;
     border: none;
-    background: #28a745;
-    color: white;
+    border-radius: 50px; /* Pill shape */
+    background: #ffffff;
+    color: #ff69b4; /* Pink text */
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 button:hover {
-    background: #1e7e34;
+    background: #ff69b4; /* Switches to pink on hover */
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
 }
 
+/* Different color for the 'Clear' or 'Equal' button */
+button:nth-last-of-type(1) {
+    background: #ffd1ff;
+    color: #b169ff;
+}
+
+/* Mesmerizing Result Area */
 #result {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
+    margin-top: 40px;
+    font-size: 35px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Result Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
