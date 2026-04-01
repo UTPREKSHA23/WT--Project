@@ -1,18 +1,25 @@
 function findLength() {
-    let str = document.getElementById("input1").value;
-    document.getElementById("result").innerText = str.length;
+    let str1 = document.getElementById("input1").value;
+    let str2 = document.getElementById("input2").value;
+    document.getElementById("result").innerText = "Lengths: " + str1.length + " & " + str2.length;
 }
 
 function reverseString() {
-    let str = document.getElementById("input1").value;
-    document.getElementById("result").innerText = str.split("").reverse().join("");
+    let str1 = document.getElementById("input1").value;
+    let str2 = document.getElementById("input2").value;
+    let combined = str1 + str2;
+    // Fix: Using 'combined' instead of 'str'
+    let reversed = combined.split("").reverse().join("");
+    document.getElementById("result").innerText = "Reversed: " + reversed;
 }
 
 function checkPalindrome() {
-    let str = document.getElementById("input1").value;
-    let rev = str.split("").reverse().join("");
+    let str1 = document.getElementById("input1").value;
+    let str2 = document.getElementById("input2").value;
+    let combined = (str1 + str2).toLowerCase();
+    let rev = combined.split("").reverse().join("");
 
-    if (str === rev) {
+    if (combined !== "" && combined === rev) {
         document.getElementById("result").innerText = "Palindrome";
     } else {
         document.getElementById("result").innerText = "Not Palindrome";
@@ -22,25 +29,26 @@ function checkPalindrome() {
 function concatenateStrings() {
     let str1 = document.getElementById("input1").value;
     let str2 = document.getElementById("input2").value;
-    document.getElementById("result").innerText = str1 + str2;
+    document.getElementById("result").innerText = "Combined: " + str1 + str2;
 }
 
 function findInitials() {
-    let str = document.getElementById("input1").value.trim();
-    let words = str.split(" ");
-    let initials = "";
-
-    for (let i = 0; i < words.length; i++) {
-        if (words[i].length > 0) {
-            initials += words[i][0].toUpperCase();
-        }
-    }
-
-    document.getElementById("result").innerText = initials;
+    let str1 = document.getElementById("input1").value.trim();
+    let str2 = document.getElementById("input2").value.trim();
+    
+    // Fix: Corrected the punctuation (: and ;) in the ternary logic
+    let firstInitial = str1.length > 0 ? str1[0] : "";
+    let secondInitial = str2.length > 0 ? str2[0]: "";
+    
+    document.getElementById("result").innerText = "Initials: " + firstInitial + secondInitial;
 }
 
 function clearFields() {
-    document.getElementById("input1").value = "";
-    document.getElementById("input2").value = "";
-    document.getElementById("result").innerText = "";
+    // Replace 'input1', 'input2', and 'result' with the actual IDs in your HTML
+    document.getElementById('input1').value = "";
+    document.getElementById('input2').value = "";
+    document.getElementById('result').innerHTML = ""; 
+    
+    // If you used a result box that needs to be hidden:
+    // document.getElementById('result').style.display = 'none';
 }
