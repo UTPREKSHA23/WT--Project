@@ -78,4 +78,9 @@ public class AddStudentServlet extends HttpServlet {
             out.println("Error: " + e.getMessage());
         }
     }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.getWriter().println("Servlet working via GET");
+    }
 }
